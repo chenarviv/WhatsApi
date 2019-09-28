@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:background="@drawable/whatsback"
+    >
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="110dp"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/logo"
+        android:foregroundGravity="center"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:layout_width="250dp"
+        android:layout_height="100dp"
+        android:background="@drawable/logo"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="500dp"
+        android:layout_marginLeft="300dp"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.9"
+        />
+
+    <TextView
+        android:id="@+id/phoneTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/phone_title"
+        android:textSize="8.5pt"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.187" />
+
+
+    <EditText
+        android:id="@+id/phoneEditText"
+        android:background="@drawable/rounded_edit_text"
+        android:textCursorDrawable="@color/colorPrimary"
+        android:gravity="left"
+        android:paddingStart="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="8dp"
+        android:alpha="0.8"
+        android:layout_width="140dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="15dp"
+        android:layout_marginStart="15dp"
+        android:layout_marginTop="90dp"
+        android:digits="1234567890"
+        android:inputType="phone"
+        android:maxLength="10"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.07"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.169" />
+
+    <Button
+        android:id="@+id/clear_num"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/x"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/phoneEditText"
+        app:layout_constraintBottom_toBottomOf="@id/phoneEditText"
+        app:layout_constraintTop_toTopOf="@id/phoneEditText"
+        android:layout_marginLeft="3dp"
+        />
+
+    <TextView
+        android:id="@+id/messageTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        android:text="@string/message_title"
+        android:textColor="@color/colorBlack"
+        android:textSize="8.5pt"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHorizontal_bias="0.107"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.40" />
+
+    <EditText
+        android:id="@+id/messageEditText"
+        android:background="@drawable/rounded_edit_text"
+        android:textCursorDrawable="@color/colorPrimary"
+        android:alpha="0.8"
+        android:paddingStart="6dp"
+        android:paddingRight="10dp"
+        android:paddingLeft="8dp"
+        android:paddingTop="5dp"
+        android:paddingEnd="6dp"
+        android:layout_width="300dp"
+        android:layout_height="100dp"
+        android:inputType="textMultiLine"
+        android:gravity="top"
+        android:textColor="@color/colorBlack"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintVertical_bias="0.53" />
+
+    <Button
+        android:id="@+id/clear_msg"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:background="@drawable/x"
+        android:textColor="@color/colorBlack"
+        android:textStyle="bold"
+        app:layout_constraintLeft_toRightOf="@id/messageEditText"
+        app:layout_constraintBottom_toBottomOf="@id/messageEditText"
+        app:layout_constraintTop_toTopOf="@id/messageEditText"
+        android:layout_marginLeft="3dp"
+        />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:prompt="@string/app_name"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="0.6dp"
+        android:layout_marginLeft="0.6dp"
+        android:entries="@array/patterns"
+        android:popupBackground="@color/offwhite"
+        android:alpha="0.9"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.66"
+        />
+
+    <Button
+        android:id="@+id/button_id"
+        android:layout_width="120dp"
+        android:layout_height="45dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:layout_marginTop="450dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/phoneEditText"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.2"
+        android:background="@drawable/send_button" />
+
+    <Button
+        android:id="@+id/button_info"
+        android:layout_width="32dp"
+        android:layout_height="30dp"
+        android:layout_marginBottom="8dp"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="@drawable/info"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.01"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.99" />
+
+
+</android.support.constraint.ConstraintLayout>
